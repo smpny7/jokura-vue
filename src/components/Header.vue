@@ -5,11 +5,14 @@
     >
       <!-- brand -->
       <router-link class="navbar-brand mt-2 mt-lg-0 pt-lg-3" to="/">
-        <img
-          class="header_logo align-middle d-inline-block"
-          src="../assets/img/header_logo.png"
-          alt="logo"
-        />
+        <picture>
+          <source srcset="../assets/img/header_logo.webp" type="image/webp" />
+          <img
+            class="header_logo align-middle d-inline-block"
+            src="../assets/img/header_logo.png"
+            alt="logo"
+          />
+        </picture>
         <h1 class="header_title d-inline-block">情クラ！</h1>
         <span class="header_subtitle d-none d-xl-inline-block"
           >~ 情報系マインクラフトサーバ ~</span

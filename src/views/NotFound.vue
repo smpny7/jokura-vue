@@ -1,14 +1,17 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="notfound_container col-10 col-sm-9 col-md-7 col-lg-5 col-xl-4 p-0 text-center">
-        <!-- <div class="h-100 w-100"> -->
-        <img
-          class="notfound_bed"
-          src="../assets/img/notfound_bed.png"
-          alt="bed"
-        />
-        <!-- </div> -->
+      <div
+        class="notfound_container col-10 col-sm-9 col-md-7 col-lg-5 col-xl-4 p-0 text-center"
+      >
+        <picture>
+          <source srcset="../assets/img/notfound_bed.webp" type="image/webp" />
+          <img
+            class="notfound_bed"
+            src="../assets/img/notfound_bed.png"
+            alt="bed"
+          />
+        </picture>
         <h2 class="notfound_title mt-3 text-center">404 エラー</h2>
         <p class="notfound_subtitle mt-4 text-center">
           申し訳ありません<br />お探しのページは見つかりませんでした
