@@ -65,7 +65,7 @@ export default {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 2.75s;
+  animation-duration: 3s;
   position: relative;
   width: 60%;
 }
@@ -74,7 +74,7 @@ export default {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 3s;
+  animation-duration: 3.75s;
   left: 26%;
   position: relative;
   top: -15%;
