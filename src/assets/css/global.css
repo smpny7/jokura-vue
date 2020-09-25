@@ -16,6 +16,10 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    -webkit-touch-callout: none;
+}
+
 .space {
     height: 95px;
 }
