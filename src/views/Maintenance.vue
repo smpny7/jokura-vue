@@ -36,8 +36,8 @@ export default {
     subtitle: string;
   } {
     return {
-      title: '',
-      subtitle: '',
+      title: "",
+      subtitle: "",
     };
   },
   mounted() {
@@ -61,19 +61,34 @@ export default {
   margin: 10vh auto 0;
 }
 .maintenance_round1 {
+  animation-name: fluffy;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 2.75s;
   position: relative;
   width: 60%;
 }
 .maintenance_round2 {
+  animation-name: fluffy;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 3s;
   left: 26%;
   position: relative;
-  top: -17%;
+  top: -15%;
   width: 80%;
 }
 .maintenance_creeper {
+  animation-name: fluffy;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 5s;
   left: 32%;
   position: relative;
-  top: -53%;
+  top: -47%;
   width: 50%;
 }
 .maintenance_title {
@@ -97,6 +112,17 @@ export default {
   }
   .maintenance_subtitle {
     font-size: 1.2rem;
+  }
+}
+
+/* animation */
+@keyframes fluffy {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(0, -10px);
   }
 }
 </style>
