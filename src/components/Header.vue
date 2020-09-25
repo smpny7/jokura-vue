@@ -70,7 +70,7 @@
             <a class="header_link nav-link" href="#">コンソール</a>
           </li>
           <li class="nav-item mt-2 mt-lg-0">
-            <a class="header_button nav-link text-center" href="#"
+            <a class="header_button nav-link text-center" href="/login"
               ><span>ログイン</span></a
             >
           </li>
