@@ -1,13 +1,13 @@
 <template>
   <header class="position-fixed w-100 px-0 px-xl-5">
     <nav
-      class="header_container align-middle mt-3 mx-2 mx-sm-5 navbar navbar-expand-lg navbar-light pt-0 px-0"
+      class="header_container align-middle mt-2 mt-sm-3 mx-2 mx-sm-5 navbar navbar-expand-lg navbar-light pt-0 px-0"
     >
       <!-- brand -->
-      <a class="navbar-brand mt-2" href="/">
+      <a class="navbar-brand mt-2 mt-lg-0 pt-lg-3" href="/">
         <img
           class="header_logo align-middle d-inline-block"
-          src="../assets/logo.png"
+          src="../assets/img/header_logo.png"
           alt="logo"
         />
         <h1 class="header_title d-inline-block">情クラ！</h1>
@@ -18,7 +18,7 @@
 
       <!-- hamburger menu -->
       <button
-        class="mr-3 navbar-toggler"
+        class="mr-4 navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -27,15 +27,17 @@
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- navigation -->
       <div class="header_collapse collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="ml-4 ml-sm-0 mt-2 nav-item">
+          <li class="ml-4 ml-lg-0 mt-2 nav-item">
             <a class="header_link nav-link" href="/">ホーム</a>
           </li>
-          <li class="dropdown ml-4 ml-sm-0 mt-2 nav-item">
+          <li class="dropdown ml-4 ml-lg-0 mt-2 nav-item">
             <a
               class="header_link dropdown-toggle nav-link"
               href="#"
@@ -47,7 +49,10 @@
             >
               メンバー機能
             </a>
-            <div class="dropdown-menu mr-4 mr-sm-0 px-2" aria-labelledby="navbarDropdown">
+            <div
+              class="dropdown-menu mr-4 mr-lg-0 mt-lg-2 px-2"
+              aria-labelledby="navbarDropdown"
+            >
               <a class="header_dropdown_item dropdown-item" href="#"
                 >起動・停止</a
               >
@@ -58,10 +63,10 @@
               >
             </div>
           </li>
-          <li class="ml-4 ml-sm-0 mt-2 nav-item">
+          <li class="ml-4 ml-lg-0 mt-2 nav-item">
             <a class="header_link nav-link" href="#">公式アプリ</a>
           </li>
-          <li class="ml-4 ml-sm-0 mt-2 nav-item">
+          <li class="ml-4 ml-lg-0 mt-2 nav-item">
             <a class="header_link nav-link" href="#">コンソール</a>
           </li>
           <li class="nav-item">
@@ -78,10 +83,42 @@
 <style scoped>
 /* bootstrap */
 .navbar-light .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0px;
+  width: 27px;
+  height: 27px;
+  box-sizing: border-box;
+  position: relative;
 }
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(172, 185, 233, 1)' stroke-width='2' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: none;
+  background-color: #acb9e9;
+  width: 27px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  transition: ease 0.5s;
+}
+.navbar-toggler-icon:nth-of-type(1) {
+  top: 5px;
+}
+.navbar-toggler-icon:nth-of-type(2) {
+  top: 14px;
+}
+.navbar-toggler-icon:nth-of-type(3) {
+  top: 23px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(1) {
+  top: 13px;
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(2) {
+  opacity: 0;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:nth-of-type(3) {
+  top: 13px;
+  transform: rotate(-45deg);
 }
 .navbar-toggler {
   outline: none;
@@ -93,6 +130,8 @@
   background: -moz-linear-gradient(top, #4f5980, #414d81);
   background: -webkit-linear-gradient(top, #4f5980, #414d81);
   background: linear-gradient(to bottom, #4f5980, #414d81);
+  border: none !important;
+  border-radius: 10px;
 }
 .dropdown-item:hover {
   background: #acb9e9;
@@ -127,7 +166,7 @@
   top: -2px;
 }
 .header_collapse {
-  margin-top: 16px;
+  padding-top: 16px;
 }
 .header_link {
   color: #acb9e9 !important;
@@ -143,13 +182,13 @@
   transform: translateY(-1px);
 }
 .header_dropdown_item {
-  border-radius: 5px;
+  border-radius: 8px;
   color: #acb9e9;
   font-size: 13px;
   letter-spacing: 1px;
   margin: 5px 0;
   padding: 10px 15px !important;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .header_dropdown_item:hover {
   box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);

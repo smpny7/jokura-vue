@@ -8,6 +8,10 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+header {
+    z-index: 100;
+}
+
 a:hover {
     text-decoration: none;
 }

@@ -37,10 +37,14 @@ const routes: RouteConfig[] = [
     meta: {
       title: 'メンテナンス中',
     },
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Maintenance.vue'),
+    component: () => import('../views/Maintenance.vue'),
+  },
+  {
+    path: '*',
+    meta: {
+      title: 'お探しのページは見つかりませんでした',
+    },
+    component: () => import('../views/NotFound.vue'),
   },
 ];
 
