@@ -1,7 +1,7 @@
 <template>
   <header class="position-fixed w-100 px-0 px-xl-5">
     <nav
-      class="header_container align-middle mt-2 mt-sm-3 mx-2 mx-sm-5 navbar navbar-expand-lg navbar-light pt-0 px-0"
+      class="header_container align-middle mt-3 mx-2 mx-sm-5 navbar navbar-expand-lg navbar-light pt-0 px-0"
     >
       <!-- brand -->
       <a class="navbar-brand mt-2 mt-lg-0 pt-lg-3" href="/">
@@ -69,7 +69,7 @@
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
             <a class="header_link nav-link" href="#">コンソール</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item mt-2 mt-lg-0">
             <a class="header_button nav-link text-center" href="#"
               ><span>ログイン</span></a
             >
@@ -215,5 +215,20 @@
 }
 .header_button > span {
   text-shadow: 4px 4px 4px rgba(52, 67, 107, 0.22);
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+  .header_collapse {
+    background: -moz-linear-gradient(top, #4f5980, #414d81);
+    background: -webkit-linear-gradient(top, #4f5980, #414d81);
+    background: linear-gradient(to bottom, #4f5980, #414d81);
+    border-radius: 10px;
+    margin: 15px 20px 0px;
+    padding: 20px 20px 30px;
+  }
+  .dropdown-menu {
+    background: none;
+  }
 }
 </style>
