@@ -4,7 +4,7 @@
       class="header_container align-middle mt-3 mx-2 mx-sm-5 navbar navbar-expand-lg navbar-light pt-0 px-0"
     >
       <!-- brand -->
-      <a class="navbar-brand mt-2 mt-lg-0 pt-lg-3" href="/">
+      <router-link class="navbar-brand mt-2 mt-lg-0 pt-lg-3" to="/">
         <img
           class="header_logo align-middle d-inline-block"
           src="../assets/img/header_logo.png"
@@ -14,7 +14,7 @@
         <span class="header_subtitle d-none d-xl-inline-block"
           >~ 情報系マインクラフトサーバ ~</span
         >
-      </a>
+      </router-link>
 
       <!-- hamburger menu -->
       <button
@@ -35,12 +35,13 @@
       <div class="header_collapse collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
-            <a class="header_link nav-link" href="/">ホーム</a>
+            <router-link class="header_link nav-link" to="/"
+              >ホーム</router-link
+            >
           </li>
           <li class="dropdown ml-4 ml-lg-0 mt-2 nav-item">
             <a
               class="header_link dropdown-toggle nav-link"
-              href="#"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -53,10 +54,12 @@
               class="dropdown-menu mr-4 mr-lg-0 mt-lg-2 px-2"
               aria-labelledby="navbarDropdown"
             >
-              <a class="header_dropdown_item dropdown-item" href="#"
-                >起動・停止</a
+              <router-link class="header_dropdown_item dropdown-item" to="#"
+                >起動・停止</router-link
               >
-              <a class="header_dropdown_item dropdown-item" href="#">再起動</a>
+              <router-link class="header_dropdown_item dropdown-item" to="#"
+                >再起動</router-link
+              >
               <div class="dropdown-divider"></div>
               <span class="header_dropdown_item dropdown-item"
                 >随時追加予定</span
@@ -64,14 +67,18 @@
             </div>
           </li>
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
-            <a class="header_link nav-link" href="#">公式アプリ</a>
+            <router-link class="header_link nav-link" to="#"
+              >公式アプリ</router-link
+            >
           </li>
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
-            <a class="header_link nav-link" href="#">コンソール</a>
+            <router-link class="header_link nav-link" to="#"
+              >コンソール</router-link
+            >
           </li>
           <li class="nav-item mt-2 mt-lg-0">
-            <a class="header_button nav-link text-center" href="/login"
-              ><span>ログイン</span></a
+            <router-link class="header_button nav-link text-center" to="/login"
+              ><span>ログイン</span></router-link
             >
           </li>
         </ul>
@@ -79,6 +86,18 @@
     </nav>
   </header>
 </template>
+
+<script lang="ts">
+import * as $ from "jquery";
+
+export default {
+  watch: {
+    $route() {
+      (<any>$("#navbarNav")).collapse("hide");
+    },
+  },
+};
+</script>
 
 <style scoped>
 /* bootstrap */
