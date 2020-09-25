@@ -40,9 +40,8 @@
             >
           </li>
           <li class="dropdown ml-4 ml-lg-0 mt-2 nav-item">
-            <router-link
+            <a
               class="header_link dropdown-toggle nav-link"
-              to="#"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -50,7 +49,7 @@
               aria-expanded="false"
             >
               メンバー機能
-            </router-link>
+            </a>
             <div
               class="dropdown-menu mr-4 mr-lg-0 mt-lg-2 px-2"
               aria-labelledby="navbarDropdown"
@@ -68,10 +67,14 @@
             </div>
           </li>
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
-            <router-link class="header_link nav-link" to="#">公式アプリ</router-link>
+            <router-link class="header_link nav-link" to="#"
+              >公式アプリ</router-link
+            >
           </li>
           <li class="ml-4 ml-lg-0 mt-2 nav-item">
-            <router-link class="header_link nav-link" to="#">コンソール</router-link>
+            <router-link class="header_link nav-link" to="#"
+              >コンソール</router-link
+            >
           </li>
           <li class="nav-item mt-2 mt-lg-0">
             <router-link class="header_button nav-link text-center" to="/login"
@@ -83,6 +86,18 @@
     </nav>
   </header>
 </template>
+
+<script lang="ts">
+import * as $ from "jquery";
+
+export default {
+  watch: {
+    $route() {
+      (<any>$("#navbarNav")).collapse("hide");
+    },
+  },
+};
+</script>
 
 <style scoped>
 /* bootstrap */
