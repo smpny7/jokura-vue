@@ -245,6 +245,7 @@ export default {
     background: -moz-linear-gradient(top, #4f5980, #414d81);
     background: -webkit-linear-gradient(top, #4f5980, #414d81);
     background: linear-gradient(to bottom, #4f5980, #414d81);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.25), 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     margin: 15px 20px 0px;
     padding: 20px 20px 30px;

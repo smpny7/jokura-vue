@@ -17,19 +17,7 @@ const routes: RouteConfig[] = [
     path: '/',
     redirect: '/maintenance',
     name: 'Home',
-    meta: {
-      title: '情クラ！ - Minecraftサーバ管理システム',
-    },
     component: Home,
-  },
-  {
-    path: '/about',
-    redirect: '/maintenance',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
   {
     path: '/maintenance',
@@ -38,6 +26,14 @@ const routes: RouteConfig[] = [
       title: 'メンテナンス中',
     },
     component: () => import('../views/Maintenance.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    meta: {
+      title: 'ログイン',
+    },
+    component: () => import('../views/Login.vue'),
   },
   {
     path: '*',
