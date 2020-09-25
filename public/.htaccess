@@ -1,5 +1,8 @@
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} jokura.net
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-Header append Access-Control-Allow-Origin: *
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
