@@ -3,21 +3,39 @@
     <div class="row">
       <div class="maintenance_container col-8 col-sm-6 col-lg-4 col-xl-3 p-0">
         <div class="h-100 w-100">
-          <img
-            class="maintenance_round1"
-            src="../assets/img/maintenance_round1.png"
-            alt="round1"
-          />
-          <img
-            class="maintenance_round2"
-            src="../assets/img/maintenance_round2.png"
-            alt="round2"
-          />
-          <img
-            class="maintenance_creeper"
-            src="../assets/img/maintenance_creeper.png"
-            alt="creeper"
-          />
+          <picture>
+            <source
+              srcset="../assets/img/maintenance_round1.webp"
+              type="image/webp"
+            />
+            <img
+              class="maintenance_round1"
+              src="../assets/img/maintenance_round1.png"
+              alt="round1"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="../assets/img/maintenance_round2.webp"
+              type="image/webp"
+            />
+            <img
+              class="maintenance_round2"
+              src="../assets/img/maintenance_round2.png"
+              alt="round2"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="../assets/img/maintenance_creeper.webp"
+              type="image/webp"
+            />
+            <img
+              class="maintenance_creeper"
+              src="../assets/img/maintenance_creeper.png"
+              alt="creeper"
+            />
+          </picture>
         </div>
         <h2 class="maintenance_title text-center">{{ title }}</h2>
         <p class="maintenance_subtitle text-center">
