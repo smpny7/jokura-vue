@@ -2,6 +2,8 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import BootstrapVue from 'bootstrap-vue';
 import Home from '../views/Home.vue';
+// @ts-ignore
+import firebase from "../../firebase.js";
 
 Vue.use(VueRouter);
 Vue.use(BootstrapVue);
@@ -15,8 +17,11 @@ import 'popper.js/dist/umd/popper';
 const routes: RouteConfig[] = [
   {
     path: '/',
-    redirect: '/maintenance',
+    // redirect: '/maintenance',
     name: 'Home',
+    meta: {
+      requiresAuth: true,
+    },
     component: Home,
   },
   {
@@ -48,6 +53,15 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach(async (to, from, next) => {
+  const requiresAuth = to.matched.some(recode => recode.meta.requiresAuth);
+  if (requiresAuth && !(await firebase.getCurrentUser())) {
+    next({ path: "/login", query: { redirect: to.fullPath } });
+  } else {
+    next();
+  }
 });
 
 export default router;

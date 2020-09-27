@@ -14,7 +14,10 @@
             alt="icon"
           />
         </picture>
-        <button class="login_button col-11 col-md-8 col-lg-6 col-xl-5">
+        <button
+          @click="googleLogin"
+          class="login_button col-11 col-md-8 col-lg-6 col-xl-5"
+        >
           <picture>
             <source
               srcset="../assets/img/login_okadai.webp"
@@ -32,6 +35,22 @@
     </div>
   </div>
 </template>
+
+<script lang="ts">
+//@ts-ignore
+import firebase from "../../firebase.js";
+
+export default {
+  name: "login",
+  methods: {
+    googleLogin: function () {
+      firebase
+        .auth()
+        .signInWithRedirect(new firebase.auth.GoogleAuthProvider())
+    },
+  },
+};
+</script>
 
 <style scoped>
 /* original */
